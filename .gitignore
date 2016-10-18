@@ -1,0 +1,9 @@
+# Builds:
+backend/build
+frontend/build
+
+# NodeJS modules:
+node_modules
+
+# Log files:
+*.log
