@@ -6,31 +6,48 @@
         <base href="/"/>
         <meta charset="utf-8">
         <title>Instantest</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
 
     <body>
 
-        <div>
-            <h3>Форма регистрации на тест</h3>
-            <div>
-                <label for="candidateName">Ваше имя:</placeholder>
-                <input id="candidateName" type="text" placeholder="Иван Петров"/>
-            </div>
-            <div>
-                <label for="candidateEmail">Почта:</placeholder>
-                <input id="candidateEmail" type="text" placeholder="ivan.petrov@email.xxx"/>
-            </div>
-            <div>
-                <label for="candidateSpecialization">Специализация:</placeholder>
-                <select id="candidateSpecialization">
-                    <option value="backend-java">Backend (Java/SQL)</option>
-                    <option value="frontend-js">Frontend (JS/HTML/CSS)</option>
-                </select>
-            </div>
-            <div>
-                <input type="button" value="Поехали!"/>
-            </div>
-        </div>
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Регистрация на тест</legend>
 
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="candidateName">Меня зовут</label>  
+                    <div class="col-md-5">
+                    <input id="candidateName" name="candidateName" type="text" placeholder="Иван Петров" class="form-control input-md">
+                    <span class="help-block">Как мы можем к Вам обращаться?</span>  
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="candidateEmail">Моя почта на</label>  
+                    <div class="col-md-5">
+                    <input id="candidateEmail" name="candidateEmail" type="text" placeholder="ivan.petrov@gmail.com" class="form-control input-md">
+                    <span class="help-block">Она понадобится для подтверждения теста.</span>  
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="candidateSpecialization">Я знаю все о</label>
+                    <div class="col-md-5">
+                    <select id="candidateSpecialization" name="candidateSpecialization" class="form-control">
+                        <option value="backend-java">web backend (Java, SQL)</option>
+                        <option value="frontend-java">web frontend (JavaScript, HTML, CSS)</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="registerForChallenge"></label>
+                    <div class="col-md-4">
+                        <button id="registerForChallenge" name="registerForChallenge" class="btn btn-primary">Готово</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     </body>
 </html>
