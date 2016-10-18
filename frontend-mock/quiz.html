@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <base href="/"/>
+        <meta charset="utf-8">
+        <title>Instantest</title>
+
+        <link rel="stylesheet" href="/static/main.css"/>
+    </head>
+
+    <body>
+
+        <div>
+            <h3>Вопросы:</h3>
+            <div>
+                <h4>Вопрос 1:</h4>
+                <div>
+                    <div>Этот вопрос содержит только текст и преполагает строгий выбор варианта ответа</div>
+                </div>
+                <div>
+                    <input type="radio" name="answer1" value="A">Вариант A</input>
+                    <input type="radio" name="answer1" value="B">Вариант B</input>
+                    <input type="radio" name="answer1" value="C">Вариант C</input>
+                    <input type="radio" name="answer1" value="D">Вариант D</input>
+                </div>
+                <h4>Вопрос 2:</h4>
+                <div>
+                    <div>Этот вопрос содержит текст и картинку и преполагает строгий выбор варианта ответа</div>
+                    <img scr="" alt="image"></img>
+                </div>
+                <div>
+                    <input type="radio" name="answer2" value="A">Вариант A</input>
+                    <input type="radio" name="answer2" value="B">Вариант B</input>
+                    <input type="radio" name="answer2" value="C">Вариант C</input>
+                    <input type="radio" name="answer2" value="D">Вариант D</input>
+                </div>
+                <h4>Вопрос 3:</h4>
+                <div>
+                    <div>Этот вопрос содержит текст и картинку и преполагает нестрогий выбор варианта ответа</div>
+                    <img scr="" alt="image"></img>
+                </div>
+                <div>
+                    <input type="checkbox" value="A">Вариант A</input>
+                    <input type="checkbox" value="B">Вариант B</input>
+                    <input type="checkbox" value="C">Вариант C</input>
+                    <input type="checkbox" value="D">Вариант D</input>
+                </div>
+                <h4>Вопрос 4:</h4>
+                <div>
+                    <div>Этот вопрос содержит текст и программный код и преполагает открытый ответ</div>
+                    <div style="font-family: monospace; white-space: pre-wrap;">
+abstract class Foo {
+
+    protected final i;
+
+    Foo(int i) {
+        this.i = i;
+    }
+}
+
+class Bar extends Foo {
+
+    Bar(int i) {
+        this.i = i;
+    }
+}
+                    </div>
+                </div>
+                <div>
+                    <input type="text" placeholder="Ваш ответ"/>
+                </div>
+                <h4>Вопрос 5:</h4>
+                <div>
+                    <div>Этот вопрос содержит только текст и преполагает ответ в свободной форме</div>
+                </div>
+                <div>
+                    <textarea></textarea>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
