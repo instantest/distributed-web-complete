@@ -7,50 +7,65 @@
         <meta charset="utf-8">
         <title>Instantest</title>
 
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="/static/main.css"/>
     </head>
 
     <body>
 
-        <div>
-            <h3>Вопросы:</h3>
-            <div>
-                <h4>Вопрос 1:</h4>
-                <div>
-                    <div>Этот вопрос содержит только текст и преполагает строгий выбор варианта ответа</div>
-                </div>
-                <div>
-                    <input type="radio" name="answer1" value="A">Вариант A</input>
-                    <input type="radio" name="answer1" value="B">Вариант B</input>
-                    <input type="radio" name="answer1" value="C">Вариант C</input>
-                    <input type="radio" name="answer1" value="D">Вариант D</input>
-                </div>
-                <h4>Вопрос 2:</h4>
-                <div>
-                    <div>Этот вопрос содержит текст и картинку и преполагает строгий выбор варианта ответа</div>
-                    <img scr="" alt="image"></img>
-                </div>
-                <div>
-                    <input type="radio" name="answer2" value="A">Вариант A</input>
-                    <input type="radio" name="answer2" value="B">Вариант B</input>
-                    <input type="radio" name="answer2" value="C">Вариант C</input>
-                    <input type="radio" name="answer2" value="D">Вариант D</input>
-                </div>
-                <h4>Вопрос 3:</h4>
-                <div>
-                    <div>Этот вопрос содержит текст и картинку и преполагает нестрогий выбор варианта ответа</div>
-                    <img scr="" alt="image"></img>
-                </div>
-                <div>
-                    <input type="checkbox" value="A">Вариант A</input>
-                    <input type="checkbox" value="B">Вариант B</input>
-                    <input type="checkbox" value="C">Вариант C</input>
-                    <input type="checkbox" value="D">Вариант D</input>
-                </div>
-                <h4>Вопрос 4:</h4>
-                <div>
-                    <div>Этот вопрос содержит текст и программный код и преполагает открытый ответ</div>
-                    <div style="font-family: monospace; white-space: pre-wrap;">
+        <div class="container">
+
+            <div class="row">
+                <h3>
+                    Question 1: Who Is The "Number One"
+                </h3>
+                <p>
+                    How many classes with <code>public static void main(String... args) {}</code> method could be packaged into a single jar file?
+                </p>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <input name="answer" type="radio" value="A"> Only one class.</input><br/>
+                                <input name="answer" type="radio" value="B"> Only one class per each Java package.</input><br/>
+                                <input name="answer" type="radio" value="C"> Unlimited, but all of them should be referenced in the manifest file.</input><br/>
+                                <input name="answer" type="radio" value="D"> There are no limitations.</input>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <hr/>
+
+            <div class="row">
+                <h3>
+                    Question 2: Windows Cleaners
+                </h3>
+                <p>
+                    How many windows cleaners do you need to do the job in Seatle?
+                </p>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <input name="answer" type="text" placeholder="Type in your answer"/>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <hr/>
+
+            <div class="row">
+                <h3>
+                    Question 3: Heizenberg Prints
+                </h3>
+                <p>
+                    Which output options might be produced by the following program?
+                </p>
+                <pre>
 abstract class Foo {
 
     protected final i;
@@ -66,18 +81,59 @@ class Bar extends Foo {
         this.i = i;
     }
 }
-                    </div>
-                </div>
-                <div>
-                    <input type="text" placeholder="Ваш ответ"/>
-                </div>
-                <h4>Вопрос 5:</h4>
-                <div>
-                    <div>Этот вопрос содержит только текст и преполагает ответ в свободной форме</div>
-                </div>
-                <div>
-                    <textarea></textarea>
-                </div>
+                </pre>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <input name="answerA" type="checkbox"/>
+                                <label for="answerA"><samp>A B B C D D E</samp>.</label><br/>
+                                <input name="answerB" type="checkbox"/>
+                                <label for="answerB"><samp>A B C A A A A</samp>.</label><br/>
+                                <input name="answerC" type="checkbox"/>
+                                <label for="answerC">Both A and B are possible.</label><br/>
+                                <input name="answerD" type="checkbox"/>
+                                <label for="answerD">Neither A nor B are possible.</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <hr/>
+
+            <div class="row">
+                <h3>
+                    Question 5: Take Some Rest
+                </h3>
+                <p>
+                    Here is an example of an HTTP request:
+                </p>
+                <pre>
+HTTP 1.1 GET myapp?action=getUser&id=42
+                </pre>
+                <p>
+                    Here is also an example of a response for the request above:
+                </p>
+                <pre>
+[
+    {
+        "id": 42
+    }
+]
+                </pre>
+                <p>
+                    What problems do you see in both of them which prevents them to be a "well-formed" RESTful request/response? How would you change them? Describe your solution.
+                </p>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </div>
     </body>
